@@ -4,9 +4,13 @@ def factura():
     cantidadSinIva = float(input("Digita el valor de la compra: "))
     iva = int(input("Digita el porcentaje del iva: "))
 
-    valorIva = (cantidadSinIva * iva)/100
-    total = cantidadSinIva + valorIva
-
-    return total
+    if iva != 0:
+        valorIva = (cantidadSinIva * iva)/100
+        total = cantidadSinIva + valorIva
+        return total
+    else:
+        valorIva = (cantidadSinIva * 21)/100
+        total = cantidadSinIva + valorIva
+        return total
 
 print(factura())
